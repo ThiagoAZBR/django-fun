@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class = 'este'>
+    
+<h2>Logar</h2>
+<form method = "post">
+
+    {% csrf_token %}
+    {{ form.as_p}}
+    <input type = "submit" value = " Logar">
+
+</form>
+
+<a href = "{% url 'dashboard' %}"> Voltar </a>
+<a href="{% url 'register' %}">Registrar</a>
+</div>
+<style>
+.este {
+
+    margin-left: 300px;
+    display: block;
+
+}
+
+</style>
+{% endblock %}
